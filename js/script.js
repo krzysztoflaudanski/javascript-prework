@@ -15,41 +15,41 @@ function getMoveName(argMoveId){
   function displayResult(argComputerMove, argPlayerMove){
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
   
-    if( argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
+    if(argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
         printMessage('Remis. Zagraj jeszcze raz.');
       }
-    if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+    if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
     printMessage('Ty wygrywasz!');
     }
-    if( argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
+    if(argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
         printMessage('Przegrałeś :(');
         }
-    if( argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch'){
+    if(argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch'){
         printMessage('Nie wybrałeś poprawnie ruchu. Spróbuj ponownie.');
         }
-    if( argComputerMove == 'papier' && argPlayerMove == 'kamień'){
+    if(argComputerMove == 'papier' && argPlayerMove == 'kamień'){
         printMessage('Przegrałeś :(');
         }
-    if( argComputerMove == 'papier' && argPlayerMove == 'papier'){
+    if(argComputerMove == 'papier' && argPlayerMove == 'papier'){
     printMessage('Remis. Zagraj jeszcze raz.');
     }
-    if( argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
+    if(argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
         printMessage('Ty wygrywasz!');
         }
-    if( argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch'){
+    if(argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch'){
         printMessage('Nie wybrałeś poprawnie ruchu. Spróbuj ponownie.');
         }
     
-    if( argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
+    if(argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
         printMessage('Wygrałeś!');
         }
-    if( argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
+    if(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
     printMessage('Przegrałeś :(');
     }
-    if( argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
+    if(argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
         printMessage('Remis. Zagraj jeszcze raz.');
         }
-    if( argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch'){
+    if(argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch'){
         printMessage('Nie wybrałeś poprawnie ruchu. Spróbuj ponownie.');
         }
   } 
@@ -70,4 +70,6 @@ let argPlayerMove = getMoveName(playerInput);
 
 printMessage('Twój ruch to: ' + argPlayerMove);
 
-displayResult(argComputerMove, argPlayerMove)
+displayResult(argComputerMove, argPlayerMove);
+
+console.log('Ruchy graczy to: ' + argComputerMove, argPlayerMove);
