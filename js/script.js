@@ -2,7 +2,7 @@
 const play = function playGame(playerInput) {
   clearMessages();
 
-  const get = function getMoveName(argMoveId) {
+  const moveName = function getMoveName(argMoveId) {
     if (argMoveId == 1) {
       return 'kamień';
     }
@@ -58,8 +58,8 @@ const play = function playGame(playerInput) {
   }
 
   const randomNumber = Math.floor(Math.random() * 3 + 1),
-        argComputerMove = get(randomNumber),
-        argPlayerMove = get(playerInput);
+        argComputerMove = moveName(randomNumber),
+        argPlayerMove = moveName(playerInput);
 
   console.log('Wylosowana liczba to: ' + randomNumber);
 
